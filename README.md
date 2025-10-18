@@ -221,3 +221,65 @@ Provides administrators with tools to monitor users, properties, bookings, and p
 ### 📨 9. Notifications and Messaging
 Implements email or in-app notifications for booking updates, payment confirmations, and reviews. Messaging between hosts and guests improves communication and ensures smooth coordination during the booking process.
 
+---
+
+## 🔒 API Security
+
+Security is a core priority in the AirBnB Clone Project to ensure that sensitive data such as user credentials, payment information, and booking details remain protected from unauthorized access and malicious activities.  
+Below are the key security measures implemented for the backend APIs.
+
+### 🔑 1. Authentication
+Ensures that only verified users can access specific API endpoints.  
+We’ll use **JSON Web Tokens (JWT)** or **OAuth 2.0** for secure user authentication, allowing users to log in once and use a token for authorized requests.  
+**Why it’s important:** Prevents unauthorized users from accessing sensitive data such as personal profiles or property details.
+
+---
+
+### 🛡️ 2. Authorization
+Controls what actions each authenticated user can perform.  
+For example, a **guest** cannot modify another user’s booking, and only **hosts** can edit or delete their own property listings.  
+**Why it’s important:** Ensures proper access control and protects data integrity between different user roles.
+
+---
+
+### 🚦 3. Rate Limiting
+Restricts the number of requests a user or client can make within a specific timeframe.  
+For instance, APIs will limit repeated login attempts or API calls to prevent brute-force attacks and misuse of system resources.  
+**Why it’s important:** Helps mitigate denial-of-service (DoS) attacks and keeps the API stable and responsive.
+
+---
+
+### 🔐 4. Data Encryption
+All sensitive data transmitted between clients and the server will be encrypted using **HTTPS (SSL/TLS)**.  
+Sensitive user data such as passwords will be hashed using strong algorithms like **bcrypt** before storage.  
+**Why it’s important:** Prevents eavesdropping, data theft, and tampering during communication or in storage.
+
+---
+
+### 🧱 5. Input Validation and Sanitization
+All inputs from users will be validated and sanitized before processing.  
+For example, text fields will be checked for SQL injection, XSS (Cross-Site Scripting), or malicious code.  
+**Why it’s important:** Protects the backend and database from code injection or data corruption attacks.
+
+---
+
+### 🧮 6. Secure Payment Handling
+All payment-related APIs will integrate with trusted payment gateways (e.g., Stripe, PayPal) that follow **PCI DSS** compliance.  
+**Why it’s important:** Ensures that sensitive financial data like credit card details are handled securely and never stored directly on the server.
+
+---
+
+### 🧰 7. Logging and Monitoring
+Implementing activity logs and audit trails for sensitive actions such as login attempts, failed payments, and data updates.  
+**Why it’s important:** Helps detect suspicious activities early and provides insight during debugging or incident response.
+
+---
+
+### 🧑‍💻 8. CORS Policy Configuration
+Cross-Origin Resource Sharing (CORS) will be configured to allow only trusted domains to access the APIs.  
+**Why it’s important:** Prevents unauthorized external applications from exploiting your backend.
+
+---
+
+### 🧾 Summary
+These measures collectively ensure that the AirBnB Clone APIs remain secure, reliable, and resilient against common threats, while maintaining user trust and protecting sensitive data across the platform.
