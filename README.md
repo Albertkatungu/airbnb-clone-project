@@ -281,5 +281,49 @@ Cross-Origin Resource Sharing (CORS) will be configured to allow only trusted do
 
 ---
 
+## ⚙️ CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) are essential practices in modern software development.  
+They automate the process of building, testing, and deploying applications, ensuring that new updates can be released quickly and reliably.
+
+### 🔁 What is CI/CD?
+- **Continuous Integration (CI):**  
+  Developers frequently merge code changes into a shared repository. Automated tests and builds are triggered to verify that the new code does not break existing functionality.
+  
+- **Continuous Deployment (CD):**  
+  Once the code passes all tests, it is automatically deployed to staging or production environments. This ensures that updates reach users faster and with fewer manual steps.
+
+---
+
+### 🚀 Why CI/CD is Important for This Project
+Implementing CI/CD in the AirBnB Clone Project ensures:
+- **Faster Development:** Automates repetitive processes like testing and deployment.  
+- **Improved Code Quality:** Early detection of bugs through automated tests.  
+- **Consistent Deployments:** Reduces human error during releases.  
+- **Team Collaboration:** Allows multiple developers to work together seamlessly with quick feedback loops.  
+- **Reliability:** Each deployment is tested and verified before release.
+
+---
+
+### 🧰 Tools for CI/CD Implementation
+
+#### 🧩 1. GitHub Actions
+Automates workflows such as testing, building, and deploying directly from the GitHub repository. Ideal for version-controlled projects like this one.
+
+#### 🐳 2. Docker
+Ensures that the application runs consistently across different environments by packaging it into portable containers.
+
+#### ☁️ 3. AWS / Heroku
+Used for hosting and automatically deploying the web application once the CI/CD pipeline completes the build successfully.
+
+#### 🧪 4. Jenkins
+An open-source automation server that can manage complex CI/CD workflows and integrate with multiple development tools.
+
+#### 🧰 5. Pytest or Unittest
+For automated testing of Python backend functionalities, ensuring code reliability before merging.
+
+---
+
 ### 🧾 Summary
-These measures collectively ensure that the AirBnB Clone APIs remain secure, reliable, and resilient against common threats, while maintaining user trust and protecting sensitive data across the platform.
+A well-implemented CI/CD pipeline helps streamline the AirBnB Clone development process, improve collaboration among team members, and ensure reliable, error-free releases to production environments.
+
