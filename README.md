@@ -74,3 +74,105 @@ Used for version control and collaboration. Git tracks code changes, while GitHu
 ### ☁️ AWS (Amazon Web Services)
 Optional for deployment — provides cloud hosting for the web application, ensuring scalability and reliability.
 
+---
+
+## 🗄️ Database Design
+
+The database for the AirBnB Clone Project is designed to efficiently store and manage information related to users, properties, bookings, reviews, and payments.  
+It uses **PostgreSQL** as the primary database system.
+
+### 🧍‍♂️ 1. Users
+Represents the individuals using the platform — both hosts and guests.
+
+**Key Fields:**
+- `id`: Unique identifier for each user.
+- `name`: Full name of the user.
+- `email`: User’s email address (unique).
+- `password_hash`: Encrypted user password.
+- `role`: Defines if the user is a host or guest.
+
+**Relationships:**
+- A **user** can list multiple **properties**.
+- A **user** can make multiple **bookings**.
+- A **user** can write multiple **reviews**.
+
+---
+
+### 🏠 2. Properties
+Represents the listings (apartments, houses, rooms) that users can rent.
+
+**Key Fields:**
+- `id`: Unique identifier for each property.
+- `title`: The name or headline of the listing.
+- `description`: Details about the property.
+- `location`: Address or city of the property.
+- `price_per_night`: Rental cost per night.
+- `host_id`: References the user who owns the property.
+
+**Relationships:**
+- A **property** belongs to one **user (host)**.
+- A **property** can have multiple **bookings** and **reviews**.
+
+---
+
+### 📅 3. Bookings
+Tracks reservation details between guests and property owners.
+
+**Key Fields:**
+- `id`: Unique identifier for each booking.
+- `user_id`: References the user (guest) who made the booking.
+- `property_id`: References the property being booked.
+- `check_in`: Start date of the booking.
+- `check_out`: End date of the booking.
+- `status`: Indicates whether the booking is pending, confirmed, or cancelled.
+
+**Relationships:**
+- A **booking** belongs to one **user** and one **property**.
+- A **booking** can have one **payment record**.
+
+---
+
+### 💬 4. Reviews
+Stores user feedback and ratings for properties.
+
+**Key Fields:**
+- `id`: Unique identifier for each review.
+- `user_id`: References the reviewer.
+- `property_id`: References the reviewed property.
+- `rating`: Numeric score (e.g., 1–5).
+- `comment`: Text feedback from the user.
+
+**Relationships:**
+- A **review** belongs to one **user** and one **property**.
+
+---
+
+### 💳 5. Payments
+Handles transaction records for confirmed bookings.
+
+**Key Fields:**
+- `id`: Unique payment identifier.
+- `booking_id`: References the booking related to this payment.
+- `amount`: Payment amount.
+- `payment_date`: Timestamp of when payment was made.
+- `payment_method`: e.g., credit card, PayPal, etc.
+- `status`: Indicates if payment was successful, pending, or failed.
+
+**Relationships:**
+- A **payment** belongs to one **booking**.
+- A **booking** can have one **payment**.
+
+---
+
+### 🔗 Entity Relationships Summary
+
+- A **User** can own multiple **Properties**.  
+- A **Property** can have multiple **Bookings** and **Reviews**.  
+- A **Booking** belongs to one **User** and one **Property**.  
+- A **Booking** can have one **Payment**.  
+- A **Review** belongs to one **User** and one **Property**.
+
+---
+
+### 📊 Visual Summary (Optional Later)
+When you advance, you can add an **ERD (Entity Relationship Diagram)** showing these tables and their relationships using tools like **draw.io**, **Lucidchart**, or **dbdiagram.io**.
