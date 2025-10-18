@@ -174,5 +174,50 @@ Handles transaction records for confirmed bookings.
 
 ---
 
-### 📊 Visual Summary (Optional Later)
-When you advance, you can add an **ERD (Entity Relationship Diagram)** showing these tables and their relationships using tools like **draw.io**, **Lucidchart**, or **dbdiagram.io**.
+## 🧠 Feature Breakdown
+
+This section outlines the key features that make up the AirBnB Clone Project and how each contributes to the overall functionality of the platform.
+
+### 👤 1. User Management
+Handles user registration, login, and profile management. Users can sign up as either hosts or guests, securely log in using encrypted credentials, and manage their personal details. This feature ensures secure access control and personalized experiences for all users.
+
+---
+
+### 🏘️ 2. Property Management
+Allows hosts to create, edit, and delete property listings. Hosts can upload photos, set prices, add descriptions, and specify availability dates. This feature provides the core functionality for listing and managing rental spaces on the platform.
+
+---
+
+### 📅 3. Booking System
+Enables guests to book available properties based on their preferred dates. It handles booking requests, confirmations, cancellations, and ensures availability synchronization. This feature connects guests with hosts through an intuitive reservation process.
+
+---
+
+### 💳 4. Payment Processing
+Facilitates secure online transactions for confirmed bookings. It manages payment methods, verifies successful transactions, and maintains a payment history for both hosts and guests. This feature adds financial trust and accountability to the system.
+
+---
+
+### ⭐ 5. Review and Rating System
+Allows guests to rate and review properties after their stay. Reviews help maintain transparency, assist future guests in making informed decisions, and motivate hosts to maintain high-quality standards.
+
+---
+
+### 🔍 6. Search and Filter Functionality
+Enables users to search for properties based on filters such as location, price, amenities, and date availability. This feature improves user experience by making property discovery quick and efficient.
+
+---
+
+### 📷 7. Media Uploads
+Allows hosts to upload multiple images for their property listings. This helps guests visualize the property and increases booking potential through rich visual content.
+
+---
+
+### ⚙️ 8. Admin Dashboard
+Provides administrators with tools to monitor users, properties, bookings, and payments. It ensures platform stability, handles user reports, and maintains overall system integrity.
+
+---
+
+### 📨 9. Notifications and Messaging
+Implements email or in-app notifications for booking updates, payment confirmations, and reviews. Messaging between hosts and guests improves communication and ensures smooth coordination during the booking process.
+
